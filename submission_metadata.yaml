@@ -1,0 +1,54 @@
+team_name: "Subbu's Home batch"
+
+primary_contact:
+  name: "Pekala Harsha Vardhan"
+  email: "pekalaharshavardhan@gmail.com"
+  phone: "+91-9502374126"
+
+team_members:
+  - name: "Pekala Harsha Vardhan"
+    email: "pekalaharshavardhan@gmail.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/HARSHA-646/redrob-candidate-ranker"
+
+sandbox_link: "TO_BE_ADDED"
+
+reproduce_command: "python rank.py --candidates candidates.jsonl --out submission.csv"
+
+compute:
+  platform: "Windows 11"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.x"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Other"
+
+ai_usage_summary: |
+  Used AI-assisted brainstorming, architecture exploration,
+  debugging support, and implementation review.
+  Final ranking logic was implemented, verified, and tested
+  against the provided challenge dataset.
+
+methodology_summary: |
+  Candidate ranking system using a weighted combination of:
+  skill relevance, career relevance, behavioral signals,
+  and experience. Skill scoring prioritizes retrieval,
+  search, ranking, vector database, and LLM-related skills.
+  Career scoring rewards highly relevant AI and search titles,
+  while behavioral signals capture recruiter engagement and
+  candidate responsiveness. The final score is used to rank
+  candidates and generate the top 100 recommendations.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: false
+  reproduction_tested: true
