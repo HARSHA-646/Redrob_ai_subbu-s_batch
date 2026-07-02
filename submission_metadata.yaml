@@ -1,4 +1,4 @@
-team_name: "Subbu's Home batch"
+team_name: "Subbu's Home Batch"
 
 primary_contact:
   name: "Pekala Harsha Vardhan"
@@ -8,43 +8,58 @@ primary_contact:
 team_members:
   - name: "Pekala Harsha Vardhan"
     email: "pekalaharshavardhan@gmail.com"
-    role: "ML Engineer"
+    role: "Team Lead,ML Engineering"
 
-github_repo: "https://github.com/HARSHA-646/redrob-candidate-ranker"
+  - name: "Munagala Praveen Naga Kumar"
+    email: "munapraveen0007@gmail.com"
+    role: "Testing"
 
-sandbox_link: "TO_BE_ADDED"
+  - name: "Pathivada Rahul"
+    email: "pathivadarahul.23.csm@anits.edu.in"
+    role: "Testing"
 
-reproduce_command: "python rank.py --candidates candidates.jsonl --out submission.csv"
+  - name: "Gollu Hritwik Rupesh"
+    email: "hritwikrupeshgollu@gmail.com"
+    role: "Data Engineering"
+
+github_repo: "https://github.com/HARSHA-646/Redrob_ai_subbu-s_batch"
+
+sandbox_link: "https://redrobai-subbus-home-batch.streamlit.app/"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 compute:
-  platform: "Windows 11"
+  platform: "HP Pavilion Laptop 15"
   cpu_cores: 8
-  ram_gb: 16
-  python_version: "3.x"
-  os: "Windows 11"
+  ram_gb: 8
+  python_version: "3.10.11"
+  os: "Windows 11 Home Single Language"
   uses_gpu_for_inference: false
   has_network_during_ranking: false
   pre_computation_required: false
   pre_computation_time_minutes: 0
 
 ai_tools_used:
-  - "Other"
+  - "multiple Gpt's"
 
 ai_usage_summary: |
-  Used AI-assisted brainstorming, architecture exploration,
-  debugging support, and implementation review.
-  Final ranking logic was implemented, verified, and tested
-  against the provided challenge dataset.
+  Used ChatGPT for problem understanding, submission guidance,
+  and debugging support during development. No AI model is used
+  in the final ranking pipeline or during inference.
 
 methodology_summary: |
-  Candidate ranking system using a weighted combination of:
-  skill relevance, career relevance, behavioral signals,
-  and experience. Skill scoring prioritizes retrieval,
-  search, ranking, vector database, and LLM-related skills.
-  Career scoring rewards highly relevant AI and search titles,
-  while behavioral signals capture recruiter engagement and
-  candidate responsiveness. The final score is used to rank
-  candidates and generate the top 100 recommendations.
+  The solution is a deterministic rule-based ranking system that combines
+  four major signals: skill relevance, career/title relevance,
+  behavioral signals, and experience. Skill scores are computed using
+  weighted matching against core, bonus, and foundation skills.
+  Career scores are derived from current job titles relevant to search,
+  recommendation, NLP, AI, and machine learning roles. Behavioral
+  signals include recruiter interest, response rate, GitHub activity,
+  notice period, and open-to-work indicators. Experience is scored to
+  favor candidates within the target experience range. Final ranking is
+  generated using weighted score aggregation and candidates are sorted
+  to produce the Top 100 submission. The approach is fully CPU-based,
+  reproducible, and does not require network access during ranking.
 
 declarations:
   read_submission_spec: true
