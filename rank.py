@@ -2,9 +2,7 @@ import json
 import pandas as pd
 import numpy as np
 import argparse
-INPUT_FILE = r"C:\Users\goutham\Downloads\[PUB] India_runs_data_and_ai_challenge\[PUB] India_runs_data_and_ai_challenge\India_runs_data_and_ai_challenge\candidates.jsonl"
 
-OUTPUT_FILE = "submission_test.csv"
 # ==================================================
 # LOAD DATA
 # ==================================================
@@ -842,33 +840,4 @@ def main():
 
 if __name__ == "__main__":
 
-    candidates = load_candidates(INPUT_FILE)
-
-    candidate_df = build_candidate_df(candidates)
-
-    skills_df = build_skills_df(candidates)
-
-    career_df = build_career_df(candidates)
-
-    skill_features = build_skill_features(skills_df)
-
-    career_features = build_career_features(career_df)
-
-    behavior_features = build_behavior_features(candidate_df)
-
-    exp_features = build_exp_features(candidate_df)
-
-    ranked_df = build_final_ranking(
-        candidate_df,
-        skill_features,
-        career_features,
-        behavior_features,
-        exp_features
-    )
-
-    create_submission(
-        ranked_df,
-        OUTPUT_FILE
-    )
-
-    print("Done")
+    main()
